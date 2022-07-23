@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class btFor {
-
+ // tam giac so
     public static void main(String[] args) {
         System.out.println("Input the number of rows: ");
         Scanner scanner= new Scanner(System.in);
