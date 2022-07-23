@@ -9,20 +9,21 @@ public class Method {
     // muc dich thuan tien cho viec su dung lai
 
     public static void main(String[] args) {
-        int min;
-        min = findSmallLestIn2Number(5, 10);
-        System.out.println("So nho nhat trong 2 so 5 vaf 10 la:" + min );
         int a=5;
         int b=10;
         int c=15;
-        int mins = findSmallLestIn3Number(a, b, c);
-        int minss = findSmallLestIn3Number2(a, b, c);
+        int min;
+        min = findSmallLestNumber(a, b);
+        System.out.println("So nho nhat trong 2 so 5 vaf 10 la:" + min );
+        int mins = findSmallLestNumber(a, b, c);
+        int minss = findSmallLestNumber2(a, b, c);
         System.out.println("So nho nhat trong 3 so " +a +","+b+ "," + c+ " la: "+ mins);
         System.out.println("So nho nhat trong 3 so " +a +","+b+ "," + c+ " la: "+ minss);
     }
 
-
-    public static int findSmallLestIn2Number(int a, int b) {
+// Overloading cho phép một lớp có khả năng định nghĩa ra nhiều phương thức có cùng tên, 
+// nhưng khác nhau về tham số truyền vào
+    public static int findSmallLestNumber(int a, int b) {
         int min;
         if(a<=b) {
             min=a;
@@ -33,14 +34,14 @@ public class Method {
     }
 
 
-    public static int findSmallLestIn3Number(int a, int b, int c) {
+    public static int findSmallLestNumber(int a, int b, int c) {
         int min=0;
-        min = findSmallLestIn2Number(a, findSmallLestIn2Number(b, c));
+        min = findSmallLestNumber(a, findSmallLestNumber(b, c));
         return min;
      
     }
 
-    public static int findSmallLestIn3Number2(int a, int b, int c) {
+    public static int findSmallLestNumber2(int a, int b, int c) {
         int min;
         if ((a<=b) && (a<=c)) {
             min=a;
