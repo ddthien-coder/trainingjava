@@ -1,4 +1,4 @@
-public class btDoWhile {
+public class DoWhile {
     public static void main(String[] args) {
         int num=1;
         // kiem tra dieu kien truoc
