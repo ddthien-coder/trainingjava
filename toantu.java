@@ -77,6 +77,4 @@ public class toantu {
             System.out.println(" You are get lower score");
         }
     }   
-
-    
 }
